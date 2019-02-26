@@ -1,0 +1,4 @@
+####### code coverage ###################
+env='local' go test -v -coverprofile cover.out `go list ./... | grep -v pkg`
+go tool cover -html=cover.out -o cover.html
+open cover.html
